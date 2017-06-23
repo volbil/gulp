@@ -88,4 +88,7 @@ gulp.task('build', ['clean', 'img'], function () {
 	var buildIndex = gulp.src('app/*.html')
 	.pipe(gulp.dest('dist/'));
 
+	var buildFavicon = gulp.src('app/favicon.*')
+	.pipe(gulp.dest('dist/'));
+
 });
