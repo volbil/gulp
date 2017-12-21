@@ -24,4 +24,4 @@ Html шаблон:
 * **gulp scripts** - збирає js бібліотеки з теки libs/js
 * **gulp build** - збирає готовий проект в папку dist
 
-![скріншот](http://i.imgur.com/e4L5w26.png)
+![скріншот](https://i.imgur.com/3ws9T3k.png)
