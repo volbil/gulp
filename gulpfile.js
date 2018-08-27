@@ -30,7 +30,7 @@ gulp.task('libs', function () {
   return gulp.src('app/libs/css/*.css')
   	.pipe(cssnano())
   	.pipe(concat('libs.min.css'))
-    .pipe(gulp.dest('app/public/css'))
+    .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({stream: true}));
 });
 
@@ -73,9 +73,9 @@ gulp.task('browser-sync', function () {
 
 gulp.task('watch', ['browser-sync', 'less', 'libs', 'scripts'], function () {
 	gulp.watch('app/less/**/*.less', ['less']);
-  	gulp.watch('app/js/**/*.js', ['js']);
 	gulp.watch('app/libs/js/**/*.js', ['scripts']);
 	gulp.watch('app/libs/css/**/*.css', ['libs']);
+	gulp.watch('app/js/**/*.js', browserSync.reload);
   	gulp.watch('app/**/*.js', browserSync.reload);
   	gulp.watch('app/**/*.css', browserSync.reload);
   	gulp.watch('app/**/*.json', browserSync.reload);
